@@ -1,4 +1,3 @@
-import { Card } from './models/Card';
+import { Controller } from "./controllers/blackjack";
 
-const c1 = new Card("H", "1");
-c1.printCard();
+Controller.displayGameSettingPage();

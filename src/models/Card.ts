@@ -1,10 +1,13 @@
 export class Card {
+    private suit: string;
+    private rank: string;
 
-    constructor(public suit: string, public rank: string) {
-
+    constructor(suit: string, rank: string) {
+        this.suit = suit;
+        this.rank = rank;
     }
 
-    public getRankNumber(): number {
+    getRankNumber(): number {
         if (this.rank === "J" || this.rank === "Q" || this.rank === "K") {
             return 10;
         } else if (this.rank === "A") {
@@ -15,7 +18,7 @@ export class Card {
         }
     }
 
-    public printCard(): void {
+    printCard(): void {
         console.log(this.suit, this.rank);
     }
 }
