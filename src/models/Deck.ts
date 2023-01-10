@@ -1,7 +1,9 @@
 import { Card } from "./Card";
 
 export class Deck {
-    constructor(private deck: Card[]) {
+    deck: Card[];
+
+    constructor() {
         this.deck = [];
     }
 
@@ -47,4 +49,20 @@ export class Deck {
         }
         return;
     }
+
+    printDeck(): void {
+        for (let i = 0; i < this.deck.length; i++) {
+            console.log(this.deck[i]);
+        }
+    }
 }
+
+// const deck = new Deck();
+// deck.createDeck();
+// deck.printDeck();
+// console.log("shuffle");
+// deck.shuffle();
+// deck.printDeck();
+// for (let i = 0; i < 5; i++) {
+//     console.log(deck.drawOne());
+// };
